@@ -1,0 +1,9 @@
+.container.mb-2
+  .d-flex.flex-wrap.align-items-center.py-2.border-bottom
+    .navbar.navbar-expand-md.navbar-light.me-auto
+      a.navbar-brand.me-md-4(href='/')
+        = image_tag asset_pack_path('media/images/logo.png'), width: 30, alt: t('.hexlet_logo')
+
+    ul.nav.nav-pills
+      li = link_to t('.login'), '#', class: 'nav-link link-dark'
+      li = link_to t('.sign_up'), '#', class: 'nav-link link-dark'
