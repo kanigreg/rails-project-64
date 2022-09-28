@@ -1,9 +1,11 @@
+---
 en:
   layouts:
     application:
-      page_title: CollectiveBlog
+      page_title: Collective Blog
     shared:
       nav:
         hexlet_logo: Hexlet logo
         login: Login
+        logout: Logout
         sign_up: Sign Up

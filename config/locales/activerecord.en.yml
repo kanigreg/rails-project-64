@@ -1,0 +1,22 @@
+en:
+  activerecord:
+    attributes:
+      user:
+        created_at: Created at
+        email: Email
+        password: Password
+        password_confirmation: Password comfirmation
+        remember_me: Remember me
+        updated_at: Updated at
+    models:
+      user:
+        one: User
+        other: Users
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: can't be blank
+            password:
+              too_short: too short

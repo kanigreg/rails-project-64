@@ -1,0 +1,20 @@
+ru:
+  activerecord:
+    attributes:
+      user:
+        created_at: Дата создания
+        email: Email
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        remember_me: Запомнить меня
+        updated_at: Дата обновления
+    models:
+      user:
+        few: Пользователя
+        many: Пользователей
+        one: Пользователь
+        other: Пользователи
+    errors:
+      messages:
+        blank: не может быть пустым
+        too_short: слишком короткий
