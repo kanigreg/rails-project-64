@@ -2,8 +2,12 @@
   small == "#{link_to t('.all_posts'), posts_path} / #{@post.category.name}"
 
 h1 = @post.title
-
 p = @post.body
-
 p.mt-3
   = @post.creator.email
+
+.lead.mb-3
+  = t('.comments')
+- if user_signed_in?
+  == render partial: 'posts/comments/form', locals: { comment: @comment, url: post_comments_path(@post) }
+== render partial: 'posts/comments/comment', collection: @post.comments
