@@ -1,4 +1,8 @@
 = content_for :title do
   = t('.title')
 
-h3 Posts
+- @posts.each do |post|
+  .border.rounded.mb-3.p-4
+    h4 = link_to post.title, post, class: 'link-dark text-decoration-none'
+    p = post.body.truncate(200, separator: ' ')
+    small = post.creator.email
