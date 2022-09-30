@@ -1,0 +1,4 @@
+= content_for :title
+  = t('.new_post')
+
+= render partial: 'form', locals: { post: @post }
