@@ -17,6 +17,6 @@ class Posts::CommentsController < Posts::ApplicationController
   private
 
   def comment_params
-    params.require(:post_comment).permit(:content)
+    params.require(:post_comment).permit(%i[content ancestry])
   end
 end
