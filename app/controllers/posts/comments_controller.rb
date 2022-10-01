@@ -7,10 +7,10 @@ class Posts::CommentsController < Posts::ApplicationController
     comment = resource_post.comments.build(comment_params)
 
     if comment.save
-      redirect_to resource_post
+      redirect_to resource_post, notice: t('.success')
     else
       @post = resource_post
-      render 'posts/show'
+      render 'posts/show', status: :unprocessable_entity
     end
   end
 

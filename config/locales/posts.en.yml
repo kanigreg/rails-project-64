@@ -1,4 +1,18 @@
 en:
   posts:
+    create:
+      success: Post was successfully created
     index:
+      ago: ago
       title: Collective blog
+    new:
+      new_post: New Post
+    show:
+      all_posts: All Posts
+      comments: Comments
+    comments:
+      create:
+        success: Comment was successfully created
+      comment:
+        reply: reply
+        require: Require

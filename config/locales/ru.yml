@@ -5,7 +5,10 @@ ru:
       page_title: Коллективный блог
     shared:
       nav:
-        hexlet_logo: Логотип Хекслета
+        add_post: Добавить статью
         login: Войти
         logout: Выйти
         sign_up: Регистрация
+  helpers:
+    submit:
+      create: Создать %{model}

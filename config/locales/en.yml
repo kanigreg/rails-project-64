@@ -5,7 +5,10 @@ en:
       page_title: Collective Blog
     shared:
       nav:
-        hexlet_logo: Hexlet logo
+        add_post: Добавить статью
         login: Login
         logout: Logout
         sign_up: Sign Up
+  helpers:
+    submit:
+      create: Create %{model}

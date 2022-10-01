@@ -3,16 +3,16 @@
     => link_to t('.all_posts'), posts_path
     = "/ #{@post.category.name}"
 
-h1 = @post.title
+h1.mb-5 = @post.title
 p = @post.body
-.d-flex.justify-content-between.mt-3.px-5
-  .text-muted
-    => @post.creator.email
-    = time_ago_in_words(@post.created_at)
+.d-flex.justify-content-between.mt-5
+  => @post.creator.email
+  = time_ago_in_words(@post.created_at)
   div
     => @post.likes.count
     = link_to post_likes_path(@post), data: { method: :post }
       i.fa-regular.fa-thumbs-up.text-secondary
+
 .lead.mb-3
   = t('.comments')
 - if user_signed_in?

@@ -1,6 +1,12 @@
 ru:
   activerecord:
     attributes:
+      comment:
+        content: Текст
+      post:
+        title: Заголовок
+        body: Содержание
+        category: Категория
       user:
         created_at: Дата создания
         email: Email
@@ -9,6 +15,16 @@ ru:
         remember_me: Запомнить меня
         updated_at: Дата обновления
     models:
+      post_comment:
+        one: Комментарий
+        few: Комментария
+        many: Комментариев
+        other: Комментарии
+      post:
+        one: Статья
+        few: Статьи
+        many: Статей
+        other: Статьи
       user:
         few: Пользователя
         many: Пользователей

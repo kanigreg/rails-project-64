@@ -1,4 +1,18 @@
 ru:
   posts:
+    create:
+      success: Статья успешно создана
     index:
+      ago: назад
       title: Коллективный блог
+    new:
+      new_post: Новая статья
+    show:
+      all_posts: Все статьи
+      comments: Комментарии
+    comments:
+      create:
+        success: Комментарий успешно создан
+      comment:
+        reply: Ответить
+        require: Требуется

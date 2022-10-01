@@ -5,4 +5,7 @@
   .border.rounded.mb-3.p-4
     h4 = link_to post.title, post, class: 'link-dark text-decoration-none'
     p = post.body.truncate(200, separator: ' ')
-    small = post.creator.email
+    small.text-muted
+      => post.creator.email
+      => time_ago_in_words(post.created_at)
+      = t('.ago')

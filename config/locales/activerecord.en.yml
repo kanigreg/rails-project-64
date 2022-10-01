@@ -1,22 +1,30 @@
 en:
   activerecord:
     attributes:
+      comment:
+        content: Content
+      post:
+        title: Title
+        body: Body
+        category: Category
       user:
         created_at: Created at
         email: Email
         password: Password
-        password_confirmation: Password comfirmation
+        password_confirmation: Password confirmation
         remember_me: Remember me
         updated_at: Updated at
     models:
+      post_comment:
+        one: Comment
+        other: Comments
+      post:
+        one: Post
+        other: Posts
       user:
         one: User
         other: Users
     errors:
-      models:
-        user:
-          attributes:
-            email:
-              blank: can't be blank
-            password:
-              too_short: too short
+      messages:
+        blank: can't be blank
+        too_short: too short
