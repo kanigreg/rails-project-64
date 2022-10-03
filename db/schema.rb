@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2022_10_01_074153) do
     t.index ["post_id"], name: "index_post_comments_on_post_id"
   end
 
-  create_table "post_likes", id: false, force: :cascade do |t|
+  create_table "post_likes", force: :cascade do |t|
     t.integer "post_id", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -58,8 +58,6 @@ ActiveRecord::Schema.define(version: 2022_10_01_074153) do
   end
 
   add_foreign_key "post_comments", "posts"
-  add_foreign_key "post_likes", "posts"
-  add_foreign_key "post_likes", "users"
   add_foreign_key "posts", "categories"
   add_foreign_key "posts", "users", column: "creator_id"
 end
