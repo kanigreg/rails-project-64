@@ -18,7 +18,7 @@ class Posts::CommentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should post create children' do
-    @attrs[:ancestry] = @comment.new_child.ancestry
+    @attrs[:parent_id] = @comment.new_child.parent_id
 
     post post_comments_path(@post), params: { post_comment: @attrs }
 

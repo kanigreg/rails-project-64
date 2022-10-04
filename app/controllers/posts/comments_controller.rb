@@ -4,9 +4,9 @@ class Posts::CommentsController < Posts::ApplicationController
   def create
     authenticate_user!
 
-    comment = resource_post.comments.build(comment_params)
+    @comment = resource_post.comments.build(comment_params)
 
-    if comment.save
+    if @comment.save
       redirect_to resource_post, notice: t('.success')
     else
       @post = resource_post
@@ -17,6 +17,6 @@ class Posts::CommentsController < Posts::ApplicationController
   private
 
   def comment_params
-    params.require(:post_comment).permit(%i[content ancestry])
+    params.require(:post_comment).permit(%i[content parent_id])
   end
 end

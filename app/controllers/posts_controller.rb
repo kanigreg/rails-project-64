@@ -14,9 +14,9 @@ class PostsController < ApplicationController
   def create
     authenticate_user!
 
-    post = current_user.posts.build(post_params)
+    @post = current_user.posts.build(post_params)
 
-    if post.save
+    if @post.save
       redirect_to posts_path, notice: t('.success')
     else
       render :new, status: :unprocessable_entity

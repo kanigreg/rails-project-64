@@ -1,7 +1,7 @@
 ru:
   activerecord:
     attributes:
-      comment:
+      post_comment:
         content: Текст
       post:
         title: Заголовок
