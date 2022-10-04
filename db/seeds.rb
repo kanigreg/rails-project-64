@@ -3,6 +3,10 @@
 ActiveRecord::Base.transaction do
   user = User.create!(email: 'test@test.for', password: '123456')
 
+  5.times do
+    User.create!(email: Faker::Internet.email, password: 'password')
+  end
+
   3.times do
     Category.create!(name: Faker::Hobby.activity)
   end
@@ -19,7 +23,8 @@ ActiveRecord::Base.transaction do
   10.times do
     PostComment.create!(
       content: Faker::Lorem.sentence,
-      post: Post.all.sample
+      post: Post.all.sample,
+      user: User.all.sample
     )
   end
 
@@ -27,7 +32,8 @@ ActiveRecord::Base.transaction do
     comment = PostComment.all.sample
     comment.children.create!(
       content: Faker::Lorem.sentence,
-      post_id: comment.post_id
+      post_id: comment.post_id,
+      user_id: comment.user_id
     )
   end
 end

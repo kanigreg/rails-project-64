@@ -4,7 +4,7 @@ class Posts::CommentsController < Posts::ApplicationController
   def create
     authenticate_user!
 
-    @comment = resource_post.comments.build(comment_params)
+    @comment = resource_post.comments.build(user: current_user, **comment_params)
 
     if @comment.save
       redirect_to resource_post, notice: t('.success')

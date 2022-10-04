@@ -3,12 +3,15 @@
 one:
   content: Comment 1
   post: one
+  user: one
 
 two:
   content: Comment 2
   post: two
+  user: one
 
 child:
   content: Child comment 1
   post: one
+  user: one
   ancestry: <%= ActiveRecord::FixtureSet.identify(:one) %>
