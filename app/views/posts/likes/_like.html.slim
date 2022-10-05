@@ -1,0 +1,6 @@
+- if post.liked_by?(current_user)
+  = link_to post_like_path(post), method: :delete
+    i.fa-regular.fa-thumbs-up.text-secondary
+- else
+  = link_to post_likes_path(post), method: :post
+    i.fa-regular.fa-thumbs-up.text-secondary

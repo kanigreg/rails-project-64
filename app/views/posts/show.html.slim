@@ -10,9 +10,7 @@ p = @post.body
   = time_ago_in_words(@post.created_at)
   div
     => @post.likes.count
-    = link_to post_likes_path(@post), data: { method: :post }
-      i.fa-regular.fa-thumbs-up.text-secondary
-
+    == render partial: 'posts/likes/like', locals: { post: @post }
 .lead.mb-3
   = t('.comments')
 - if user_signed_in?
