@@ -19,7 +19,7 @@ class Posts::LikesControllerTest < ActionDispatch::IntegrationTest
   test 'should delete destroy' do
     sign_in users(:one)
 
-    delete post_like_path(@post)
+    delete post_like_path(@post, post_likes(:one))
 
     assert { @post.likes.count.zero? }
     assert_redirected_to @post
