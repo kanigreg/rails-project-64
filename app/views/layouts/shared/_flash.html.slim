@@ -4,6 +4,6 @@
       - if type == 'notice'
         .alert.alert-info
           = msg
-      - if type == 'error'
+      - if type == 'error' || type == 'alert'
         .alert.alert-danger
           = msg
