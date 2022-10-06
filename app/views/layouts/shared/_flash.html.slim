@@ -4,6 +4,9 @@
       - if type == 'notice'
         .alert.alert-info
           = msg
-      - if %w[error alert].include? type
+      - if type == 'error'
         .alert.alert-danger
+          = msg
+      - else
+        .alert.alert-primary
           = msg
