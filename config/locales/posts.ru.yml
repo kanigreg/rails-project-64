@@ -1,5 +1,12 @@
+---
 ru:
   posts:
+    comments:
+      comment:
+        reply: Ответить
+        require: Требуется
+      create:
+        success: Комментарий успешно создан
     create:
       success: Статья успешно создана
     index:
@@ -10,9 +17,3 @@ ru:
     show:
       all_posts: Все статьи
       comments: Комментарии
-    comments:
-      create:
-        success: Комментарий успешно создан
-      comment:
-        reply: Ответить
-        require: Требуется

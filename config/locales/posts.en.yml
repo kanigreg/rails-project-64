@@ -1,5 +1,12 @@
+---
 en:
   posts:
+    comments:
+      comment:
+        reply: reply
+        require: Require
+      create:
+        success: Comment was successfully created
     create:
       success: Post was successfully created
     index:
@@ -10,9 +17,3 @@ en:
     show:
       all_posts: All Posts
       comments: Comments
-    comments:
-      create:
-        success: Comment was successfully created
-      comment:
-        reply: reply
-        require: Require

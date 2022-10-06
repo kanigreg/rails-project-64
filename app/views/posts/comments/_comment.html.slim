@@ -16,7 +16,7 @@ a.small.text-muted[
   - else
     .small
       => t('.require')
-      = link_to t('devise.session.new.sign_in'), new_user_session_path
+      = link_to t('devise.sessions.new.sign_in'), new_user_session_path
 
 .ms-3.ps-2.border-start
   == render partial: 'posts/comments/comment', collection: comment.children, as: :comment

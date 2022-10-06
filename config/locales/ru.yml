@@ -1,5 +1,8 @@
 ---
 ru:
+  helpers:
+    submit:
+      create: Создать %{model}
   layouts:
     application:
       page_title: Коллективный блог
@@ -9,6 +12,3 @@ ru:
         login: Войти
         logout: Выйти
         sign_up: Регистрация
-  helpers:
-    submit:
-      create: Создать %{model}

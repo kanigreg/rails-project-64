@@ -1,12 +1,13 @@
+---
 ru:
   activerecord:
     attributes:
-      post_comment:
-        content: Текст
       post:
-        title: Заголовок
         body: Содержание
         category: Категория
+        title: Заголовок
+      post_comment:
+        content: Текст
       user:
         created_at: Дата создания
         email: Email
@@ -14,23 +15,27 @@ ru:
         password_confirmation: Подтверждение пароля
         remember_me: Запомнить меня
         updated_at: Дата обновления
+    errors:
+      messages:
+        blank: не может быть пустым
+        confirmation: "не совпадает со значением поля %{attribute}"
+        invalid: имеет неверное значение
+        taken: уже занят
+        too_short: слишком короткий
+        required: "обязательное поле"
     models:
-      post_comment:
-        one: Комментарий
-        few: Комментария
-        many: Комментариев
-        other: Комментарии
       post:
-        one: Статья
         few: Статьи
         many: Статей
+        one: Статья
         other: Статьи
+      post_comment:
+        few: Комментария
+        many: Комментариев
+        one: Комментарий
+        other: Комментарии
       user:
         few: Пользователя
         many: Пользователей
         one: Пользователь
         other: Пользователи
-    errors:
-      messages:
-        blank: не может быть пустым
-        too_short: слишком короткий

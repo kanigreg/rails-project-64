@@ -1,5 +1,8 @@
 ---
 en:
+  helpers:
+    submit:
+      create: Create %{model}
   layouts:
     application:
       page_title: Collective Blog
@@ -9,6 +12,3 @@ en:
         login: Login
         logout: Logout
         sign_up: Sign Up
-  helpers:
-    submit:
-      create: Create %{model}

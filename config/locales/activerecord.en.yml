@@ -1,12 +1,13 @@
+---
 en:
   activerecord:
     attributes:
-      comment:
-        content: Content
       post:
-        title: Title
         body: Body
         category: Category
+        title: Title
+      post_comment:
+        content: Content
       user:
         created_at: Created at
         email: Email
@@ -14,17 +15,21 @@ en:
         password_confirmation: Password confirmation
         remember_me: Remember me
         updated_at: Updated at
-    models:
-      post_comment:
-        one: Comment
-        other: Comments
-      post:
-        one: Post
-        other: Posts
-      user:
-        one: User
-        other: Users
     errors:
       messages:
         blank: can't be blank
+        confirmation: not confirmed
+        invalid: is invalid
+        taken: has already been taken
         too_short: too short
+        required: required
+    models:
+      post:
+        one: Post
+        other: Posts
+      post_comment:
+        one: Comment
+        other: Comments
+      user:
+        one: User
+        other: Users

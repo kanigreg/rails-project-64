@@ -1,3 +1,4 @@
+---
 ru:
   datetime:
     distance_in_words:
@@ -11,9 +12,9 @@ ru:
         one: около %{count} года
         other: около %{count} лет
       almost_x_years:
-        one: почти %{count} год
         few: почти %{count} года
         many: почти %{count} лет
+        one: почти %{count} год
         other: почти %{count} года
       half_a_minute: полминуты
       less_than_x_minutes:
@@ -26,27 +27,27 @@ ru:
         one: более %{count} года
         other: более %{count} лет
       x_days:
-        one: '%{count} день'
-        few: '%{count} дня'
-        many: '%{count} дней'
-        other: '%{count} дней'
+        few: "%{count} дня"
+        many: "%{count} дней"
+        one: "%{count} день"
+        other: "%{count} дней"
       x_minutes:
-        one: '%{count} минуту'
-        few: '%{count} минуты'
-        many: '%{count} минут'
-        other: '%{count} минуты'
+        few: "%{count} минуты"
+        many: "%{count} минут"
+        one: "%{count} минуту"
+        other: "%{count} минуты"
       x_months:
-        one: '%{count} месяц'
-        few: '%{count} месяца'
-        many: '%{count} месяцев'
-        other: '%{count} месяца'
-      x_years:
-        one: '%{count} год'
-        few: '%{count} года'
-        many: '%{count} лет'
-        other: '%{count} года'
+        few: "%{count} месяца"
+        many: "%{count} месяцев"
+        one: "%{count} месяц"
+        other: "%{count} месяца"
       x_seconds:
-        one: '%{count} секунда'
-        few: '%{count} секунды'
-        many: '%{count} секунд'
-        other: '%{count} секунды'
+        few: "%{count} секунды"
+        many: "%{count} секунд"
+        one: "%{count} секунда"
+        other: "%{count} секунды"
+      x_years:
+        few: "%{count} года"
+        many: "%{count} лет"
+        one: "%{count} год"
+        other: "%{count} года"
