@@ -7,7 +7,7 @@ ru:
         category: Категория
         title: Заголовок
       post_comment:
-        content: Текст
+        content: Комментарий
       user:
         created_at: Дата создания
         email: Email

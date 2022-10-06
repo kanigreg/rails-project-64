@@ -7,7 +7,7 @@ en:
         category: Category
         title: Title
       post_comment:
-        content: Content
+        content: Comment
       user:
         created_at: Created at
         email: Email

@@ -9,8 +9,8 @@ class Posts::CommentsController < Posts::ApplicationController
     if @comment.save
       redirect_to resource_post, notice: t('.success')
     else
-      @post = resource_post
-      render 'posts/show', status: :unprocessable_entity
+      flash[:error] = @comment.errors.full_messages.join(' ')
+      redirect_to resource_post
     end
   end
 
