@@ -4,4 +4,23 @@
 
 # Collective blog
 
+Publish posts, discuss them and mark your favorites.
+
 Try on [Heroku](https://kanigreg-collective-blog.herokuapp.com)
+
+## Usage
+
+To run locally, set up a web application
+
+```bash
+make setup
+```
+
+Run server
+
+```bash
+make start
+```
+
+And go to
+[ http://localhost:3000 ]( http://localhost:3000 )
