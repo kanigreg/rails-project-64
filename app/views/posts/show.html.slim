@@ -6,11 +6,10 @@
 h1.mb-5 = @post.title
 p = @post.body
 .d-flex.justify-content-between.mt-5
-  => @post.creator.email
-  = time_ago_in_words(@post.created_at)
-  div
-    => @post.likes.count
-    == render partial: 'posts/likes/like', locals: { post: @post }
+  #post-section
+    span.me-2 = @post.creator.email
+    span = time_ago_in_words(@post.created_at)
+  == render partial: 'posts/likes/like', locals: { post: @post }
 .lead.mb-3
   = t('.comments')
 - if user_signed_in?
