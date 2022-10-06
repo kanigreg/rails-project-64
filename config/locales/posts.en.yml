@@ -10,7 +10,6 @@ en:
     create:
       success: Post was successfully created
     index:
-      ago: ago
       title: Collective blog
     new:
       new_post: New Post

@@ -10,7 +10,6 @@ ru:
     create:
       success: Статья успешно создана
     index:
-      ago: назад
       title: Коллективный блог
     new:
       new_post: Новая статья

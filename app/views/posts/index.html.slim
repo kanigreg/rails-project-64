@@ -6,6 +6,9 @@
     h4 = link_to post.title, post, class: 'link-dark text-decoration-none'
     p = post.body.truncate(200, separator: ' ')
     small.text-muted
-      => post.creator.email
-      => time_ago_in_words(post.created_at)
-      = t('.ago')
+      span.me-1 = post.likes.count
+      i.far.fa-thumbs-up.text-secondary.me-2
+      span.me-1 = post.comments.count
+      i.far.fa-comments.text-secondary.me-2
+      span.me-2 = post.creator.email
+      span = time_ago_in_words(post.created_at)

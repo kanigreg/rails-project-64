@@ -1,7 +1,7 @@
 .my-4
   small.text-muted
-    => link_to t('.all_posts'), posts_path
-    = "/ #{@post.category.name}"
+    span.me-2 = link_to t('.all_posts'), posts_path
+    span = "/ #{@post.category.name}"
 
 h1.mb-5 = @post.title
 p = @post.body
