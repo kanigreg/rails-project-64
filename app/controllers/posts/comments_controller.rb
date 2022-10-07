@@ -9,8 +9,7 @@ class Posts::CommentsController < Posts::ApplicationController
     if @comment.save
       redirect_to resource_post, notice: t('.success')
     else
-      flash[:error] = @comment.errors.full_messages.join(' ')
-      redirect_to resource_post
+      redirect_to resource_post, alert: @comment.errors.full_messages.join(' ')
     end
   end
 
