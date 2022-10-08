@@ -9,7 +9,7 @@ p = @post.body
   #post-section
     span.me-2 = @post.creator.email
     span = time_ago_in_words(@post.created_at)
-  == render partial: 'posts/likes/like', locals: { post: @post }
+  == render partial: 'posts/likes/like', locals: { post: @post, like: @user_like }
 .lead.mb-3
   = t('.comments')
 - if user_signed_in?

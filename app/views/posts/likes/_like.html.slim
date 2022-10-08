@@ -1,6 +1,5 @@
 #likes-section
   span.me-2 = post.likes.size
-  - like = find_like(post)
   - if like.present?
     = link_to post_like_path(post, like), method: :delete
       i.fas.fa-thumbs-up.text-secondary
