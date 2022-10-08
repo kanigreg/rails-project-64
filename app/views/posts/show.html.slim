@@ -13,5 +13,5 @@ p = @post.body
 .lead.mb-3
   = t('.comments')
 - if user_signed_in?
-  == render partial: 'posts/comments/form', locals: { comment: @comment, url: post_comments_path(@post) }
-== render partial: 'posts/comments/collection', locals: { comments: @comments_tree }
+  == render partial: 'posts/comments/form', locals: { comment: @comment, url: post_comments_path(@post), parent_id: nil }
+== render partial: 'posts/comments/collection', locals: { comments: @comments_tree, new_comment: @comment }

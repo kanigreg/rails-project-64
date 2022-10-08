@@ -3,25 +3,23 @@
 require 'test_helper'
 
 class Posts::LikesControllerTest < ActionDispatch::IntegrationTest
-  setup do
-    @post = posts(:one)
-  end
-
   test 'should post create' do
     sign_in users(:two)
+    post = posts(:without_likes)
 
-    post post_likes_path(@post)
+    post post_likes_path(post)
 
-    assert { @post.likes.count == 2 }
-    assert_redirected_to @post
+    assert { PostLike.exists? post: post, user: users(:two) }
+    assert_redirected_to post
   end
 
   test 'should delete destroy' do
-    sign_in users(:one)
+    like = post_likes(:one)
+    sign_in like.user
 
-    delete post_like_path(@post, post_likes(:one))
+    delete post_like_path(like.post, like)
 
-    assert { @post.likes.count.zero? }
-    assert_redirected_to @post
+    assert_not PostLike.exists?(like.id)
+    assert_redirected_to like.post
   end
 end

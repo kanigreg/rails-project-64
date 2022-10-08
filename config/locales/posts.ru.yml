@@ -2,7 +2,7 @@
 ru:
   posts:
     comments:
-      comment:
+      collection:
         reply: Ответить
         require: Требуется
       create:

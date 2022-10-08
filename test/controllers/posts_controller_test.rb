@@ -29,6 +29,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
 
     post posts_path, params: { post: @attrs }
 
+    assert { Post.exists? @attrs }
     assert_redirected_to posts_path
   end
 

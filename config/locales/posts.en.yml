@@ -2,7 +2,7 @@
 en:
   posts:
     comments:
-      comment:
+      collection:
         reply: reply
         require: Require
       create:

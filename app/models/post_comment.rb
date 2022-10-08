@@ -7,8 +7,4 @@ class PostComment < ApplicationRecord
   has_ancestry
 
   validates :content, presence: true
-
-  def new_child
-    children.new(post_id: post_id, user_id: user_id)
-  end
 end
