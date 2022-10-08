@@ -1,0 +1,23 @@
+- comments.each do |comment, children|
+  hr.mb-2
+
+  .small.text-muted.bg-light
+    span.me-2 = comment.user.email
+    span = time_ago_in_words(comment.created_at)
+  p = comment.content
+
+  a.small.text-muted[
+    data={ 'bs-toggle': 'collapse' }
+    href="#newPostComment-#{comment.id}"
+    aria={ expended: false }
+  ] = t('.reply')
+  .collapse[id="newPostComment-#{comment.id}"]
+    - if user_signed_in?
+      == render partial: 'posts/comments/form', locals: { comment: comment.new_child, url: post_comments_path(comment.post_id) }
+    - else
+      .small
+        => t('.require')
+        = link_to t('devise.sessions.new.sign_in'), new_user_session_path
+
+  .ms-3.ps-2.border-start
+    == render partial: 'posts/comments/collection', locals: { comments: children }

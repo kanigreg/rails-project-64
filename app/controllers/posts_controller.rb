@@ -2,7 +2,7 @@
 
 class PostsController < ApplicationController
   def index
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.all.includes(:creator).order(created_at: :desc)
   end
 
   def new
@@ -24,7 +24,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.includes(:creator).find(params[:id])
+    @comments_tree = @post.comments.includes(:user).arrange
     @comment = PostComment.new(post: @post)
   end
 

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 ActiveRecord::Base.transaction do
-  user = User.create!(email: 'test@test.for', password: '123456')
+  User.create!(email: 'test@test.for', password: '123456')
 
   5.times do
     User.create!(email: Faker::Internet.email, password: 'password')
@@ -16,7 +16,7 @@ ActiveRecord::Base.transaction do
       title: Faker::Lorem.sentence,
       body: Faker::Lorem.paragraph(sentence_count: 8, random_sentences_to_add: 10),
       category: Category.all.sample,
-      creator: user
+      creator: User.all.sample
     )
   end
 
