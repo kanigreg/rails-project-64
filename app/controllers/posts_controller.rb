@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.includes(:creator).find(params[:id])
+    @post = Post.find(params[:id])
     @comments_tree = @post.comments.includes(:user).arrange
     @user_like = @post.likes.find_by(user: current_user)
     @comment = PostComment.new(post: @post)
